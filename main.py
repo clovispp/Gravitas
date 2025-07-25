@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from PIL import Image
 from streamlit_elements import elements, mui, nivo
 from st_link_analysis import st_link_analysis, NodeStyle, EdgeStyle
 import warnings
@@ -13,37 +14,45 @@ def load_data():
 
 df, df2 = load_data()
 
-st.logo("data/l-gravitas-2.jpg", size = 'large')
+st.logo("data/l-gravitas-2.jpg", size="large")
 # Injection CSS complète
 st.markdown("""
     <style>
     /* Redimensionner le logo */
     [data-testid="stHeader"] img {
-        height: 110px !important;
-        width: auto !important;
+        height: 110px;
+        width: auto;
         margin: auto;
         display: block;
     }
 
     /* Forcer la hauteur de len-tête pour contenir le logo */
     [data-testid="stHeader"] {
-        min-height: 100px !important;
-        height: auto !important;
-        padding: 1px 0 !important;
-        overflow: hidden !important;
+        min-height: 100px;
+        height: auto;
+        padding: 1px 0;
+        overflow: hidden;
     }
+    
+    /* Centrer le titre */
+    [data-testid="stSidebar"] img {
+        height: 110px;
+        display: block;
+        margin: auto;
+        width: auto;
+    }  
     </style>
 """, unsafe_allow_html=True)
-
 
 st.title('Gulf-Africa Strategic Partnership Index Dashboard')
 
 st.set_page_config(
-    page_title = 'Geospatial Dashboard',
+    page_title = 'GASPI INDEX NAVIGATOR',
     layout = 'wide'
 )
 with st.sidebar:
-  st.title('Geospatial Dashboard')
+  st.markdown("<br>", unsafe_allow_html=True)
+  st.title('GASPI INDEX NAVIGATOR')
 
     # Liste des régions disponibles
   region_lst = sorted(df["Region"].dropna().unique())
@@ -275,9 +284,9 @@ with st.container():
 
     # Styles
     node_styles = [
-        NodeStyle("INDEX", "#00CED1", "name", "Index"),
-        NodeStyle("PILLAR", "#FF7F3E", "name", "Pillar"),
-        NodeStyle("INDICATOR", "#2A629A", "name", "Indicator"),
+        NodeStyle("INDEX", "#00CED1", "name", "world"),
+        NodeStyle("PILLAR", "#FF7F3E", "name", "pillar"),
+        NodeStyle("INDICATOR", "#2A629A", "name", "indi"),
     ]
 
     edge_styles = [
