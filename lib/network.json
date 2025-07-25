@@ -1,0 +1,48 @@
+{
+    "nodes": [
+        {"data": {"id": "Composite", "label": "INDEX", "name": "Composite Index"}},
+
+        {"data": {"id": "Economic", "label": "PILLAR", "name": "Economic Importance (40%)"}},
+        {"data": {"id": "Political", "label": "PILLAR", "name": "Political & Diplomatic Relations (35%)"}},
+        {"data": {"id": "Social", "label": "PILLAR", "name": "Social & Strategic Significance (25%)"}},
+
+ 
+        {"data": {"id": "Imports", "label": "INDICATOR", "name": "GCC Imports of Goods/Services"}},
+        {"data": {"id": "Exports", "label": "INDICATOR", "name": "GCC Exports of Goods/Services"}},
+        {"data": {"id": "FDI", "label": "INDICATOR", "name": "GCC Greenfield FDI"}},
+        {"data": {"id": "GDP", "label": "INDICATOR", "name": "GDP (PPP, Const $)"}},
+        {"data": {"id": "PCI", "label": "INDICATOR", "name": "GDP Per Capita"}},
+        {"data": {"id": "Renewables", "label": "INDICATOR", "name": "Renewable Energy Share"}},
+        {"data": {"id": "LPI", "label": "INDICATOR", "name": "Logistic Performance Index"}},
+
+        {"data": {"id": "Diplomacy", "label": "INDICATOR", "name": "Diplomatic Ties with GCC"}},
+        {"data": {"id": "Stability", "label": "INDICATOR", "name": "Political Stability"}},
+        {"data": {"id": "Governance", "label": "INDICATOR", "name": "Government Effectiveness"}},
+
+        {"data": {"id": "Population", "label": "INDICATOR", "name": "Population Size"}},
+        {"data": {"id": "Urban", "label": "INDICATOR", "name": "Urbanization Rate"}},
+        {"data": {"id": "Food", "label": "INDICATOR", "name": "Food Security & Agriculture"}}
+    ],
+    "edges": [
+    
+        {"data": {"id": "e1", "label": "INCLUDES", "source": "Composite", "target": "Economic"}},
+        {"data": {"id": "e2", "label": "INCLUDES", "source": "Composite", "target": "Political"}},
+        {"data": {"id": "e3", "label": "INCLUDES", "source": "Composite", "target": "Social"}},
+
+        {"data": {"id": "e4", "label": "MEASURED_BY", "source": "Economic", "target": "Imports"}},
+        {"data": {"id": "e5", "label": "MEASURED_BY", "source": "Economic", "target": "Exports"}},
+        {"data": {"id": "e6", "label": "MEASURED_BY", "source": "Economic", "target": "FDI"}},
+        {"data": {"id": "e7", "label": "MEASURED_BY", "source": "Economic", "target": "GDP"}},
+        {"data": {"id": "e8", "label": "MEASURED_BY", "source": "Economic", "target": "PCI"}},
+        {"data": {"id": "e9", "label": "MEASURED_BY", "source": "Economic", "target": "Renewables"}},
+        {"data": {"id": "e10", "label": "MEASURED_BY", "source": "Economic", "target": "LPI"}},
+
+        {"data": {"id": "e11", "label": "MEASURED_BY", "source": "Political", "target": "Diplomacy"}},
+        {"data": {"id": "e12", "label": "MEASURED_BY", "source": "Political", "target": "Stability"}},
+        {"data": {"id": "e13", "label": "MEASURED_BY", "source": "Political", "target": "Governance"}},
+
+        {"data": {"id": "e14", "label": "MEASURED_BY", "source": "Social", "target": "Population"}},
+        {"data": {"id": "e15", "label": "MEASURED_BY", "source": "Social", "target": "Urban"}},
+        {"data": {"id": "e16", "label": "MEASURED_BY", "source": "Social", "target": "Food"}}
+    ]
+}

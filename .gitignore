@@ -1,0 +1,20 @@
+# Environnement virtuel
+venv/
+.env/
+__pycache__/
+*.pyc
+
+# Fichiers systèmes
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Fichiers de Streamlit
+.streamlit/config.toml
+.gravitas_country_index.csv
+
+# Données temporaires
+*.csv~
+*.xlsx~
