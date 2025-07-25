@@ -1,8 +1,8 @@
-# 🌍 Gulf-Africa Strategic Partnership Index Dashboard
+# Gulf-Africa Strategic Partnership Index Dashboard
 
 Cette application Streamlit permet d'explorer des données macroéconomiques et stratégiques sur les pays africains et les monarchies du Golfe.
 
-## 🚀 Fonctionnalités principales
+## Fonctionnalités principales
 
 - Carte choroplèthe des indices composites par pays
 - Fiches-pays dynamiques avec indicateurs économiques
@@ -11,7 +11,7 @@ Cette application Streamlit permet d'explorer des données macroéconomiques et 
 - Intégration possible avec l'API World Bank
 - Dashboard draggable avec `streamlit-elements`
 
-## 🛠️ Installation
+## Installation
 
 ```bash
 git clone https://github.com/votre_utilisateur/gravitas-dashboard.git
