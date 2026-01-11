@@ -2,6 +2,8 @@
 
 Cette application Streamlit permet d'explorer des données macroéconomiques et stratégiques sur les pays africains et les monarchies du Golfe.
 
+https://gdashb1.streamlit.app/
+
 ## Fonctionnalités principales
 
 - Carte choroplèthe des indices composites par pays
